@@ -23,8 +23,8 @@ The best visibility can be reached at our big events near May Day. These Wappu e
 
 Don’t hesitate to contact!
 
-Annastiina Manninen
+Matilda Laurila
 
-Commissioner of Foreign Affairs 2025
+Commissioner of Foreign Affairs 2026
 
-annastiina.manninen(at)teekkarikomissio.fi
+mailda.laurila(at)teekkarikomissio.fi

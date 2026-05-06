@@ -23,8 +23,8 @@ Den bästa synligheten för företag skapas av våra wappevenemang som är Tekno
 
 Ta modigt kontakt!
 
-Annastiina Manninen
+Matilda Laurila
 
-Utrikeskommissarie 2025
+Utrikeskommissarie 2026
 
-annastiina.manninen(at)teekkarikomissio.fi
+matilda.laurila(at)teekkarikomissio.fi

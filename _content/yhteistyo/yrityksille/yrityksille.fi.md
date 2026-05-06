@@ -25,8 +25,8 @@ Parhaan näkyvyyden yrityksille tuottaa wapputapahtumamme, joita ovat teekkarifu
 
 Ota yhteyttä rohkeasti!
 
-Annastiina Manninen
+Matilda Laurila
 
-Ulkoasiainkomissaari 2025
+Ulkoasiainkomissaari 2026
 
-annastiina.manninen(at)teekkarikomissio.fi
+matilda.laurila(at)teekkarikomissio.fi

@@ -47,12 +47,12 @@
     }
   }
 
-/* Ensure partner logos sit side-by-side with equal width, even if Markdown renders separate paragraphs */
+/* Ensure partner logos sit side-by-side and center naturally for any count */
 .markdown p:has(img) {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-items: center;
+  justify-content: center;
   gap: 2rem;
   margin: 2rem;
 }
@@ -63,11 +63,7 @@
   height: auto;
 }
 @media (max-width: 768px) {
-  .markdown p:has(img) {
-    grid-template-columns: 1fr;
-  }
   .markdown img {
-    width: 16rem; /* ~w-64 on small screens */
-    justify-self: center;
+    width: 16rem;
   }
 }
