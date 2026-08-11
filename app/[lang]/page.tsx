@@ -181,6 +181,7 @@ export default async function IndexPage({
                 alt="Tech student life at Turku"
                 fill
                 priority
+                sizes="(max-width: 1023px) 100vw, 50vw"
                 className="object-cover brightness-90 shadow-2xl"
               />
             </div>
@@ -205,13 +206,15 @@ export default async function IndexPage({
         <div className="grid grid-cols-1 gap-16">
           {/* Culture Section */}
           <div className="flex flex-col lg:flex-row items-center gap-8">
-            <Image
-              src="/index-jaynamerkki.jpg"
-              alt="Paavo Nurmi"
-              width={300}
-              height={200}
-              className="rounded-lg w-full lg:w-auto max-w-[300px]"
-            />
+            <div className="relative aspect-[3/2] w-full max-w-[300px]">
+              <Image
+                src="/index-jaynamerkki.jpg"
+                alt="Paavo Nurmi"
+                fill
+                sizes="(max-width: 1023px) 100vw, 300px"
+                className="rounded-lg object-cover"
+              />
+            </div>
             <div className="flex flex-col">
               <h3 className="text-2xl font-bold mb-4 text-center lg:text-left">
                 {frontPageContent[lang].culture.title}
@@ -224,13 +227,15 @@ export default async function IndexPage({
 
           {/* Influence Section */}
           <div className="flex flex-col lg:flex-row items-center gap-8">
-            <Image
-              src="/paavon-lakitus.jpg"
-              alt="Paavon lakitus"
-              width={300}
-              height={200}
-              className="rounded-lg w-full lg:w-auto max-w-[300px]"
-            />
+            <div className="relative aspect-[3/2] w-full max-w-[300px]">
+              <Image
+                src="/paavon-lakitus.jpg"
+                alt="Paavon lakitus"
+                fill
+                sizes="(max-width: 1023px) 100vw, 300px"
+                className="rounded-lg object-cover"
+              />
+            </div>
             <div className="flex flex-col">
               <h3 className="text-2xl font-bold mb-4 text-center lg:text-left">
                 {frontPageContent[lang].influence.title}
