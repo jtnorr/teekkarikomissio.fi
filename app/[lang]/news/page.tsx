@@ -23,7 +23,9 @@ async function getAllNews(lang: Locale): Promise<NewsItem[]> {
   }
 
   const filenames = fs.readdirSync(newsDirectory)
-  const news = filenames
+
+
+  return filenames
     .filter(filename => filename.endsWith(`.${lang}.md`))
     .map(filename => {
       const filePath = path.join(newsDirectory, filename)
@@ -40,8 +42,6 @@ async function getAllNews(lang: Locale): Promise<NewsItem[]> {
       }
     })
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-
-  return news
 }
 
 const translations = {

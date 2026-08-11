@@ -206,15 +206,14 @@ export default async function IndexPage({
         <div className="grid grid-cols-1 gap-16">
           {/* Culture Section */}
           <div className="flex flex-col lg:flex-row items-center gap-8">
-            <div className="relative aspect-[3/2] w-full max-w-[300px]">
-              <Image
-                src="/index-jaynamerkki.jpg"
-                alt="Paavo Nurmi"
-                fill
-                sizes="(max-width: 1023px) 100vw, 300px"
-                className="rounded-lg object-cover"
-              />
-            </div>
+            <Image
+              src="/index-jaynamerkki.jpg"
+              alt="Paavo Nurmi"
+              width={300}
+              height={200}
+              sizes = "(max-width: 1023px) 100vw, 300px"
+              className="rounded-lg w-full lg:w-auto max-w-[300px]"
+            />
             <div className="flex flex-col">
               <h3 className="text-2xl font-bold mb-4 text-center lg:text-left">
                 {frontPageContent[lang].culture.title}
@@ -270,9 +269,7 @@ export default async function IndexPage({
         </div>
       </div>
       {/* Instagram Feed Section */}
-      <InstagramSection lang={lang}
-      />
-
+      <InstagramSection lang={lang} />
 
       {/* Partners Section */}
       <div className="w-full">
