@@ -57,7 +57,12 @@ export default function Navbar({ lang, contentFolders }: NavigationBarProps) {
 
   const NavbarBrand = () => (
     <div className="flex items-center justify-center text-white">
-      <Image className="fill-current h-8 w-8 mr-2" src={tklogo} alt="TK logo" />
+      <Image
+        className="fill-current h-8 w-8 mr-2"
+        src={tklogo}
+        alt="TK logo"
+        loading="eager"
+      />
       <Link href={`/${lang}/`}>Teekkarikomissio</Link>
     </div>
   )
