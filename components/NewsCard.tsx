@@ -1,3 +1,5 @@
+import { type Locale } from '@/i18n-config'
+
 interface NewsItem {
   slug: string;
   title: string;
@@ -6,7 +8,13 @@ interface NewsItem {
   author: string;
 }
 
-export function NewsCard({ news, lang = 'fi' }: { news: NewsItem; lang?: string }) {
+const translations: Record<Locale, string> = {
+  fi: 'Lue lisää →',
+  sv: 'Läs mer →',
+  en: 'Read more →',
+}
+
+export function NewsCard({ news, lang = 'fi' }: { news: NewsItem; lang?: Locale }) {
   return (
     <article className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow bg-white">
       <time className="text-sm text-gray-500">
@@ -18,7 +26,7 @@ export function NewsCard({ news, lang = 'fi' }: { news: NewsItem; lang?: string 
         href={`/${lang}/news/${news.slug}`}
         className="text-primary hover:underline font-medium"
       >
-        Lue lisää →
+        {translations[lang]}
       </a>
     </article>
   );
