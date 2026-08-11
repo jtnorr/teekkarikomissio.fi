@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { NewsCard } from './NewsCard';
+import { type Locale } from '@/i18n-config';
 
 interface NewsItem {
   slug: string;
@@ -29,7 +30,7 @@ const translations = {
   },
 };
 
-export function NewsSection({ lang = 'fi' }: { lang?: string }) {
+export function NewsSection({ lang = 'fi' }: { lang?: Locale }) {
   const [news, setNews] = useState<NewsItem[]>([]);
   const [loading, setLoading] = useState(true);
   const t = translations[lang as keyof typeof translations] || translations.fi;

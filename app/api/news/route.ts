@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { NextResponse, NextRequest } from 'next/server';
+import { getNewsExcerpt } from '@/lib/news';
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
@@ -22,7 +23,7 @@ export async function GET(request: NextRequest) {
         title: data.title,
         date: data.date,
         author: data.author,
-        excerpt: data.excerpt,
+        excerpt: getNewsExcerpt(content, data.excerpt),
         content,
       };
     })
