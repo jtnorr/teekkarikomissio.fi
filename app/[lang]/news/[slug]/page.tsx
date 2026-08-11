@@ -28,7 +28,7 @@ function getAllNewsSlugs(): string[] {
   const filenames = fs.readdirSync(newsDirectory)
   const slugs = new Set<string>()
 
-  filenames.forEach(filename => {
+  filenames.forEach((filename) => {
     const match = filename.match(/^(.+)\.(fi|sv|en)\.md$/)
     if (match) {
       slugs.add(match[1])
@@ -82,8 +82,8 @@ export async function generateMetadata({
 export async function generateStaticParams() {
   const slugs = getAllNewsSlugs()
   const languages: Locale[] = ['fi', 'sv', 'en']
-  return languages.flatMap(lang =>
-    slugs.map(slug => ({
+  return languages.flatMap((lang) =>
+    slugs.map((slug) => ({
       slug,
       lang,
     }))
@@ -115,9 +115,7 @@ export default async function NewsArticlePage({
           >
             ← Takaisin uutisiin
           </Link>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mt-4">
-            {news.title}
-          </h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mt-4">{news.title}</h1>
         </div>
       </div>
 
@@ -141,10 +139,7 @@ export default async function NewsArticlePage({
         />
 
         <div className="mt-12 pt-8 border-t">
-          <Link
-            href={`/${lang}/news`}
-            className="text-primary hover:underline font-semibold"
-          >
+          <Link href={`/${lang}/news`} className="text-primary hover:underline font-semibold">
             ← Takaisin uutisiin
           </Link>
         </div>

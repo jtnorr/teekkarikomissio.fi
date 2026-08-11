@@ -7,9 +7,9 @@ import frontpageStyles from './frontpage-styles.module.css'
 
 import getPageBySlug from '@/lib/api'
 import markdownToHtml from '@/lib/markdownToHtml'
-import { EventsSection } from '@/components/EventsSection';
-import { NewsSection } from '@/components/NewsSection';
-import { InstagramSection } from '@/components/InstagramSection';
+import { EventsSection } from '@/components/EventsSection'
+import { NewsSection } from '@/components/NewsSection'
+import { InstagramSection } from '@/components/InstagramSection'
 
 type Props = {
   params: Promise<{ lang: Locale }>
@@ -134,11 +134,7 @@ const frontPageContent = {
   },
 }
 
-export default async function IndexPage({
-  params,
-}: {
-  params: Promise<{ lang: Locale }>
-}) {
+export default async function IndexPage({ params }: { params: Promise<{ lang: Locale }> }) {
   const { lang } = await params
 
   const homePage = getPageBySlug('home/home', lang)
@@ -211,7 +207,7 @@ export default async function IndexPage({
               alt="Paavo Nurmi"
               width={300}
               height={200}
-              sizes = "(max-width: 1023px) 100vw, 300px"
+              sizes="(max-width: 1023px) 100vw, 300px"
               className="rounded-lg w-full lg:w-auto max-w-[300px]"
             />
             <div className="flex flex-col">
