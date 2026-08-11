@@ -1,11 +1,11 @@
 import { type Locale } from '@/i18n-config'
 
 interface NewsItem {
-  slug: string;
-  title: string;
-  date: string;
-  excerpt: string;
-  author: string;
+  slug: string
+  title: string
+  date: string
+  excerpt: string
+  author: string
 }
 
 const translations: Record<Locale, string> = {
@@ -22,12 +22,9 @@ export function NewsCard({ news, lang = 'fi' }: { news: NewsItem; lang?: Locale 
       </time>
       <h3 className="text-xl font-semibold mt-2 mb-3">{news.title}</h3>
       <p className="text-gray-700 mb-4">{news.excerpt}</p>
-      <a
-        href={`/${lang}/news/${news.slug}`}
-        className="text-primary hover:underline font-medium"
-      >
+      <a href={`/${lang}/news/${news.slug}`} className="text-primary hover:underline font-medium">
         {translations[lang]}
       </a>
     </article>
-  );
+  )
 }
