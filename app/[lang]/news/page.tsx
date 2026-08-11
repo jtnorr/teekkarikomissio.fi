@@ -4,6 +4,7 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import { Locale } from '@/i18n-config'
+import { getNewsExcerpt } from '@/lib/news'
 
 interface NewsItem {
   slug: string
@@ -34,7 +35,7 @@ async function getAllNews(lang: Locale): Promise<NewsItem[]> {
         title: data.title,
         date: data.date,
         author: data.author,
-        excerpt: data.excerpt,
+        excerpt: getNewsExcerpt(content, data.excerpt),
         content,
       }
     })

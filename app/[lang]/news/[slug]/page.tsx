@@ -7,6 +7,7 @@ import markdownToHtml from '@/lib/markdownToHtml'
 import { notFound } from 'next/navigation'
 import frontpageStyles from '@/app/[lang]/frontpage-styles.module.css'
 import { Locale } from '@/i18n-config'
+import { getNewsExcerpt } from '@/lib/news'
 
 interface NewsItem {
   slug: string
@@ -53,7 +54,7 @@ function getNewsBySlug(slug: string, lang: Locale): NewsItem | null {
     title: data.title,
     date: data.date,
     author: data.author,
-    excerpt: data.excerpt,
+    excerpt: getNewsExcerpt(content, data.excerpt),
     content,
   }
 }
